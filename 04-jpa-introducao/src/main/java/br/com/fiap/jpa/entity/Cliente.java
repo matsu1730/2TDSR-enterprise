@@ -62,9 +62,24 @@ public class Cliente {
 	@Column(name="ds_genero", length = 40)
 	private Genero genero;
 	
+	public Cliente() {
+	}
+	
 	public Cliente(String nome, String email, BigDecimal credito, LocalDate dataNascimento,
 			byte[] fotoCnh, Genero genero) {
 		super();
+		this.nome = nome;
+		this.email = email;
+		this.credito = credito;
+		this.dataNascimento = dataNascimento;
+		this.fotoCnh = fotoCnh;
+		this.genero = genero;
+	}
+	
+	public Cliente(Integer codigo, String nome, String email, BigDecimal credito, LocalDate dataNascimento,
+			byte[] fotoCnh, Genero genero) {
+		super();
+		this.codigo = codigo;
 		this.nome = nome;
 		this.email = email;
 		this.credito = credito;

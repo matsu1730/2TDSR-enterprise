@@ -23,9 +23,12 @@ public class ExemploCadastro {
 		//Instanciar um Cliente
 		Cliente cliente = new Cliente("Priscila", "priscila@fiap.com.br",new BigDecimal("1000"), 
 											LocalDate.of(2000, Month.APRIL, 19), null, Genero.FEMININO);
+		Cliente cliente2 = new Cliente("Leandro", "leandro@fiap.com.br",new BigDecimal("1000"), 
+											LocalDate.of(2000, Month.MAY, 22), null, Genero.MASCULINO);
 		
 		//Cadastrar um Cliente
 		em.persist(cliente);
+		em.persist(cliente2);
 		
 		//Começar uma transação
 		em.getTransaction().begin();
@@ -33,12 +36,6 @@ public class ExemploCadastro {
 		em.getTransaction().commit();
 		
 		System.out.println("Cliente cadastrado!");
-		
-		//Instanciar uma Empresa
-		
-		//Cadastrar uma Empresa
-		
-		//Commit
 		
 		//Fechar os recursos
 		em.close();
